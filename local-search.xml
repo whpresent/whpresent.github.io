@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>CPP003:循环</title>
+    <link href="/2023/01/19/CPP003-%E5%BE%AA%E7%8E%AF/"/>
+    <url>/2023/01/19/CPP003-%E5%BE%AA%E7%8E%AF/</url>
+    
+    <content type="html"><![CDATA[<h2 id="3-1-For循环"><a href="#3-1-For循环" class="headerlink" title="3.1 For循环"></a>3.1 For循环</h2><p>for循环最基础的用法如下</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">5</span>;i++)<br>        <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Hello,World!&quot;</span>);<br></code></pre></td></tr></table></figure><h2 id="3-2-While循环"><a href="#3-2-While循环" class="headerlink" title="3.2 While循环"></a>3.2 While循环</h2><p>基础用法如下</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">5</span>)<br>&#123;<br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Hello,While!&quot;</span>);<br>    i++;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="3-3-do-while循环"><a href="#3-3-do-while循环" class="headerlink" title="3.3 do-while循环"></a>3.3 do-while循环</h2><p>do-while循环基本与while循环相同，但do-while循环中do语句块的代码至少会被使用一次</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">do</span> <span class="hljs-comment">//execute at least once.</span><br>&#123;<br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;do while isn&#x27;t useless!&quot;</span>);<br>    i++;<br>&#125; <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>);<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CPP002:条件判断与分支</title>
+    <link href="/2023/01/19/CPP002-%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E4%B8%8E%E5%88%86%E6%94%AF/"/>
+    <url>/2023/01/19/CPP002-%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E4%B8%8E%E5%88%86%E6%94%AF/</url>
+    
+    <content type="html"><![CDATA[<h2 id="2-1-条件判断"><a href="#2-1-条件判断" class="headerlink" title="2.1 条件判断"></a>2.1 条件判断</h2><p>条件判断最经常使用的就是if语句，通过if语句，计算机会判断条件是否为真，若为真，就跳转到内存固定的位置执行该位置处的语句，经常在内存中跳转有可能造成代码执行速度下降。</p><p>使用示例:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> num = <span class="hljs-number">5</span>;<br><span class="hljs-type">bool</span> comparison = (num == <span class="hljs-number">5</span>); <span class="hljs-comment">//bool type stores the comparison result</span><br><span class="hljs-keyword">if</span>(comparison)<br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Equal 5!&quot;</span>);<br><span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Not equal...&quot;</span>);<br></code></pre></td></tr></table></figure><p>bool类型是一种特殊的整数类型，若为0，则为假，反之则为真</p><p>也可用来判断指针是否为Null</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">const</span> <span class="hljs-type">char</span>* ptr = <span class="hljs-string">&quot;It&#x27;s not a null&quot;</span>;<br><span class="hljs-keyword">if</span> (ptr) <span class="hljs-comment">//if ptr is null,the next statement won&#x27;t be performed</span><br>    <span class="hljs-built_in">Log</span>(ptr);<br><span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Null!&quot;</span>);<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CPP000:环境的安装</title>
     <link href="/2023/01/19/CPP000-%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/"/>
     <url>/2023/01/19/CPP000-%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</url>
