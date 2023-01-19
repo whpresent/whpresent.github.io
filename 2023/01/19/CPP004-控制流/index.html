@@ -16,21 +16,24 @@
   <meta name="author" content="Wenhao Present">
   <meta name="keywords" content="">
   
-    <meta name="description" content="3.1 For循环for循环最基础的用法如下 12for(int i &#x3D; 0;i &lt; 5;i++)        Log(&quot;Hello,World!&quot;);  3.2 While循环基础用法如下 123456int i &#x3D; 0;while(i &lt; 5)&amp;#123;    Log(&quot;Hello,While!&quot;);    i++;&amp;#125;  3.3">
+    <meta name="description" content="4.1 Continue语句continue语句跳过循环的一次执行。代码如下 1234567for(int i &#x3D; 0;i &lt; 5;i++)&amp;#123;     if(i % 2 &#x3D;&#x3D; 0) &#x2F;&#x2F;若i为偶数则continue         continue;     Log(&quot;Hello,continue!&quot;);     std::cout &lt;&lt; i &amp;lt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CPP003:循环">
-<meta property="og:url" content="https://whpresent.github.io/2023/01/19/CPP003-%E5%BE%AA%E7%8E%AF/index.html">
+<meta property="og:title" content="CPP004:控制流">
+<meta property="og:url" content="https://whpresent.github.io/2023/01/19/CPP004-%E6%8E%A7%E5%88%B6%E6%B5%81/index.html">
 <meta property="og:site_name" content="fluid">
-<meta property="og:description" content="3.1 For循环for循环最基础的用法如下 12for(int i &#x3D; 0;i &lt; 5;i++)        Log(&quot;Hello,World!&quot;);  3.2 While循环基础用法如下 123456int i &#x3D; 0;while(i &lt; 5)&amp;#123;    Log(&quot;Hello,While!&quot;);    i++;&amp;#125;  3.3">
+<meta property="og:description" content="4.1 Continue语句continue语句跳过循环的一次执行。代码如下 1234567for(int i &#x3D; 0;i &lt; 5;i++)&amp;#123;     if(i % 2 &#x3D;&#x3D; 0) &#x2F;&#x2F;若i为偶数则continue         continue;     Log(&quot;Hello,continue!&quot;);     std::cout &lt;&lt; i &amp;lt">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-19T10:04:43.000Z">
-<meta property="article:modified_time" content="2023-01-19T10:35:03.399Z">
+<meta property="og:image" content="https://whpresent.github.io/img/blog_img/CPP004/1.png">
+<meta property="og:image" content="https://whpresent.github.io/img/blog_img/CPP004/2.png">
+<meta property="article:published_time" content="2023-01-19T10:36:51.000Z">
+<meta property="article:modified_time" content="2023-01-19T11:10:24.260Z">
 <meta property="article:author" content="Wenhao Present">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://whpresent.github.io/img/blog_img/CPP004/1.png">
   
   
   
-  <title>CPP003:循环 - fluid</title>
+  <title>CPP004:控制流 - fluid</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CPP003:循环"></span>
+            <span id="subtitle" data-typed-text="CPP004:控制流"></span>
           
         </div>
 
@@ -207,7 +210,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-19 18:04" pubdate>
+        <time datetime="2023-01-19 18:36" pubdate>
           2023年1月19日 晚上
         </time>
       </span>
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          336 字
+          536 字
         
       </span>
     
@@ -230,7 +233,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -268,20 +271,25 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">CPP003:循环</h1>
+            <h1 style="display: none">CPP004:控制流</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="3-1-For循环"><a href="#3-1-For循环" class="headerlink" title="3.1 For循环"></a>3.1 For循环</h2><p>for循环最基础的用法如下</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">5</span>;i++)<br>        <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Hello,World!&quot;</span>);<br></code></pre></td></tr></table></figure>
+                <h2 id="4-1-Continue语句"><a href="#4-1-Continue语句" class="headerlink" title="4.1 Continue语句"></a>4.1 Continue语句</h2><p>continue语句跳过循环的一次执行。代码如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">5</span>;i++)<br>&#123;<br>     <span class="hljs-keyword">if</span>(i % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-comment">//若i为偶数则continue</span><br>         <span class="hljs-keyword">continue</span>;<br>     <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Hello,continue!&quot;</span>);<br>     std::cout &lt;&lt; i &lt;&lt; std::endl;     <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="3-2-While循环"><a href="#3-2-While循环" class="headerlink" title="3.2 While循环"></a>3.2 While循环</h2><p>基础用法如下</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">5</span>)<br>&#123;<br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Hello,While!&quot;</span>);<br>    i++;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>上述代码当i为偶数时执行分支语句，跳过循环，输出结果为</p>
+<p><img src="/img/blog_img/CPP004/1.png" srcset="/img/loading.gif" lazyload alt="输出结果"></p>
+<h2 id="4-2-Break语句"><a href="#4-2-Break语句" class="headerlink" title="4.2 Break语句"></a>4.2 Break语句</h2><p>break语句直接结束循环</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">5</span>;i++)<br>&#123;<br>     <span class="hljs-keyword">if</span>(i &gt; <span class="hljs-number">2</span>)<br>         <span class="hljs-keyword">break</span>;<br>     <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;Hello,break!&quot;</span>);<br>     std::cout &lt;&lt; i &lt;&lt; std::endl;     <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="3-3-do-while循环"><a href="#3-3-do-while循环" class="headerlink" title="3.3 do-while循环"></a>3.3 do-while循环</h2><p>do-while循环基本与while循环相同，但do-while循环中do语句块的代码至少会被使用一次</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">do</span> <span class="hljs-comment">//execute at least once.</span><br>&#123;<br>    <span class="hljs-built_in">Log</span>(<span class="hljs-string">&quot;do while isn&#x27;t useless!&quot;</span>);<br>    i++;<br>&#125; <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>);<br></code></pre></td></tr></table></figure>
+<p>当i&#x3D;3时满足条件直接结束循环，输出结果为:</p>
+<p><img src="/img/blog_img/CPP004/2.png" srcset="/img/loading.gif" lazyload alt="输出结果"></p>
+<h2 id="4-3-Return语句"><a href="#4-3-Return语句" class="headerlink" title="4.3 Return语句"></a>4.3 Return语句</h2><p>return语句直接退出函数，并需要一个合法的类型作为返回值</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Hello,World!&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
+<p>此时程序会直接退出main函数，也即直接退出程序。其后的输出语句并不会被执行</p>
 
                 
               </div>
@@ -299,8 +307,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CPP003:循环</div>
-      <div>https://whpresent.github.io/2023/01/19/CPP003-循环/</div>
+      <div>CPP004:控制流</div>
+      <div>https://whpresent.github.io/2023/01/19/CPP004-控制流/</div>
     </div>
     <div class="license-meta">
       
@@ -344,18 +352,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/19/CPP004-%E6%8E%A7%E5%88%B6%E6%B5%81/" title="CPP004:控制流">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CPP004:控制流</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/01/19/CPP002-%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E4%B8%8E%E5%88%86%E6%94%AF/" title="CPP002:条件判断与分支">
-                        <span class="hidden-mobile">CPP002:条件判断与分支</span>
+                      <a href="/2023/01/19/CPP003-%E5%BE%AA%E7%8E%AF/" title="CPP003:循环">
+                        <span class="hidden-mobile">CPP003:循环</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
