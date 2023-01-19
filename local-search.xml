@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>CPP001:头文件</title>
+    <link href="/2023/01/18/CPP001-%E5%A4%B4%E6%96%87%E4%BB%B6/"/>
+    <url>/2023/01/18/CPP001-%E5%A4%B4%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-1-头文件的作用"><a href="#1-1-头文件的作用" class="headerlink" title="1.1 头文件的作用"></a>1.1 头文件的作用</h2><p>头文件通常用来存储函数的定义，以便其他源文件访问而无需四处粘贴函数的完整内容。头文件以.h结尾</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//Log.h </span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Log</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span>* message)</span></span>;<span class="hljs-comment">//头文件中存储函数定义</span><br></code></pre></td></tr></table></figure><p>当需要在其他文件中使用Log函数时，用include预处理指令,使用&lt;&gt;来包含标准库头文件</p><p>使用””来包含自定义头文件(优先从项目目录搜索)</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;Log.h&quot;</span></span><br><span class="hljs-comment">/*...some other code...*/</span><br></code></pre></td></tr></table></figure><p>由于头文件经常互相包含，很有可能出现在<strong>一个翻译单元</strong>重复包含的情况，可以使用批处理语句来解决这类问题</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> once</span><br><span class="hljs-comment">//...some other definition...</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>CPP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我的第一篇博客</title>
     <link href="/2023/01/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <url>/2023/01/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
