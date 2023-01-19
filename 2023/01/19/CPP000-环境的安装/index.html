@@ -16,22 +16,26 @@
   <meta name="author" content="Wenhao Present">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.1 头文件的作用头文件通常用来存储函数的定义，以便其他源文件访问而无需四处粘贴函数的完整内容。头文件以.h结尾 12&#x2F;&#x2F;Log.h void Log(const char* message);&#x2F;&#x2F;头文件中存储函数定义  当需要在其他文件中使用Log函数时，用include预处理指令,使用&lt;&gt;来包含标准库头文件 使用””来包含自定义头文件(优先从项目目录搜索) 12#include">
+    <meta name="description" content="0.1 编译器的下载笔者使用的是MinGW-w64，这是一款开源的编译器，在sourceforge上可以下载 网址：MinGW-w64 - for 32 and 64 bit Windows - Browse &#x2F;mingw-w64&#x2F;mingw-w64-release at SourceForge.net 选择合适自己机器的版本下载，笔者的电脑是64位的，故选择的版本为 ![im">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CPP001:头文件">
-<meta property="og:url" content="https://whpresent.github.io/2023/01/18/CPP001-%E5%A4%B4%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:title" content="CPP000:环境的安装">
+<meta property="og:url" content="https://whpresent.github.io/2023/01/19/CPP000-%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="fluid">
-<meta property="og:description" content="1.1 头文件的作用头文件通常用来存储函数的定义，以便其他源文件访问而无需四处粘贴函数的完整内容。头文件以.h结尾 12&#x2F;&#x2F;Log.h void Log(const char* message);&#x2F;&#x2F;头文件中存储函数定义  当需要在其他文件中使用Log函数时，用include预处理指令,使用&lt;&gt;来包含标准库头文件 使用””来包含自定义头文件(优先从项目目录搜索) 12#include">
+<meta property="og:description" content="0.1 编译器的下载笔者使用的是MinGW-w64，这是一款开源的编译器，在sourceforge上可以下载 网址：MinGW-w64 - for 32 and 64 bit Windows - Browse &#x2F;mingw-w64&#x2F;mingw-w64-release at SourceForge.net 选择合适自己机器的版本下载，笔者的电脑是64位的，故选择的版本为 ![im">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-18T14:01:18.000Z">
-<meta property="article:modified_time" content="2023-01-19T05:38:57.875Z">
+<meta property="og:image" content="e:/Study/hexo_blog/themes/fluid/source/img/blog_img/CPP000/2.png">
+<meta property="og:image" content="e:/Study/hexo_blog/themes/fluid/source/img/blog_img/CPP000/3.png">
+<meta property="og:image" content="e:/Study/hexo_blog/themes/fluid/source/img/blog_img/CPP000/4..png">
+<meta property="og:image" content="e:/Study/hexo_blog/themes/fluid/source/img/blog_img/CPP000/5.png">
+<meta property="article:published_time" content="2023-01-19T05:46:46.000Z">
+<meta property="article:modified_time" content="2023-01-19T06:38:19.562Z">
 <meta property="article:author" content="Wenhao Present">
-<meta property="article:tag" content="CPP">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="e:/Study/hexo_blog/themes/fluid/source/img/blog_img/CPP000/2.png">
   
   
   
-  <title>CPP001:头文件 - fluid</title>
+  <title>CPP000:环境的安装 - fluid</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CPP001:头文件"></span>
+            <span id="subtitle" data-typed-text="CPP000:环境的安装"></span>
           
         </div>
 
@@ -208,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-18 22:01" pubdate>
-          2023年1月18日 晚上
+        <time datetime="2023-01-19 13:46" pubdate>
+          2023年1月19日 下午
         </time>
       </span>
     
@@ -220,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          499 字
+          1k 字
         
       </span>
     
@@ -231,7 +235,7 @@
         
         
         
-          5 分钟
+          9 分钟
         
       </span>
     
@@ -269,25 +273,34 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">CPP001:头文件</h1>
+            <h1 style="display: none">CPP000:环境的安装</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="1-1-头文件的作用"><a href="#1-1-头文件的作用" class="headerlink" title="1.1 头文件的作用"></a>1.1 头文件的作用</h2><p>头文件通常用来存储函数的定义，以便其他源文件访问而无需四处粘贴函数的完整内容。头文件以.h结尾</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//Log.h </span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Log</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span>* message)</span></span>;<span class="hljs-comment">//头文件中存储函数定义</span><br></code></pre></td></tr></table></figure>
+                <h2 id="0-1-编译器的下载"><a href="#0-1-编译器的下载" class="headerlink" title="0.1 编译器的下载"></a>0.1 编译器的下载</h2><p>笔者使用的是MinGW-w64，这是一款开源的编译器，在sourceforge上可以下载</p>
+<p>网址：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">MinGW-w64 - for 32 and 64 bit Windows - Browse &#x2F;mingw-w64&#x2F;mingw-w64-release at SourceForge.net</a></p>
+<p>选择合适自己机器的版本下载，笔者的电脑是64位的，故选择的版本为</p>
+<p>![img](file:&#x2F;&#x2F;&#x2F;C:\Users\Present_Wenhao\Documents\Tencent Files\1603554587\Image\C2C~A&#96;~4H}AMGYF1&#96;&#96;IXNP]$I4.png)</p>
+<p>中间的win32表示目标平台是windows，若是Linux和Mac的话需下载posix版本</p>
+<p>下载好的文件解压在自己喜欢的地方就可以了</p>
+<h2 id="0-2-环境变量配置"><a href="#0-2-环境变量配置" class="headerlink" title="0.2 环境变量配置"></a>0.2 环境变量配置</h2><p>为了使用编译器，我们需要将编译器的路径告知计算机，也就是设置系统环境变量，将刚才解压好的文件里的bin目录路径复制下来，添加Path中(系统环境变量)</p>
+<p><img src="E:\Study\hexo_blog\themes\fluid\source\img\blog_img\CPP000\2.png" srcset="/img/loading.gif" lazyload alt="2"></p>
+<h2 id="0-3-检测是否安装成功"><a href="#0-3-检测是否安装成功" class="headerlink" title="0.3 检测是否安装成功"></a>0.3 检测是否安装成功</h2><p>打开cmd输入gcc -v若出现以下信息则表示安装成功</p>
+<p><img src="E:\Study\hexo_blog\themes\fluid\source\img\blog_img\CPP000\3.png" srcset="/img/loading.gif" lazyload alt="3"></p>
+<h2 id="0-4-Visual-Studio-Code的使用"><a href="#0-4-Visual-Studio-Code的使用" class="headerlink" title="0.4 Visual Studio Code的使用"></a>0.4 Visual Studio Code的使用</h2><p>自行下载VIsual Studio Code安装包(官网一搜就有)，调教成自己喜欢的样子，笔者的如下</p>
+<p><img src="E:\Study\hexo_blog\themes\fluid\source\img\blog_img\CPP000\4..png" srcset="/img/loading.gif" lazyload alt="4."></p>
+<p>左侧sidebar选择扩展,搜索C++安装<img src="E:\Study\hexo_blog\themes\fluid\source\img\blog_img\CPP000\5.png" srcset="/img/loading.gif" lazyload alt="5"></p>
+<p>在自己喜欢的位置建立一个文件夹，进入powershell，cd进这个文件夹,键入以下指令</p>
+<p>通过vscode打开这个文件夹，并信任此文件夹下所有作者</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">code .<br></code></pre></td></tr></table></figure>
 
-<p>当需要在其他文件中使用Log函数时，用include预处理指令,使用&lt;&gt;来包含标准库头文件</p>
-<p>使用””来包含自定义头文件(优先从项目目录搜索)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;Log.h&quot;</span></span><br><span class="hljs-comment">/*...some other code...*/</span><br></code></pre></td></tr></table></figure>
+<p>新建文件命名为source.cpp，写一个helloworld</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Hello,World!&quot;</span> &lt;&lt; std::endl;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>由于头文件经常互相包含，很有可能出现在<strong>一个翻译单元</strong>重复包含的情况，可以使用批处理语句来解决这类问题</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> once</span><br><span class="hljs-comment">//...some other definition...</span><br></code></pre></td></tr></table></figure>
-
-<p>还可以使用另一种风格的保护修饰符</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">ifndef</span> _SOME_H <span class="hljs-comment">//判断是否定义了_SOME_H</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> _SOME_H <span class="hljs-comment">//若没有定义(没有包含此头文件)，定义_SOME_H</span></span><br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">function</span><span class="hljs-params">()</span></span>;<br><span class="hljs-meta">#<span class="hljs-keyword">define</span> NUM 114514</span><br><span class="hljs-meta">#<span class="hljs-keyword">endif</span> <span class="hljs-comment">//结束</span></span><br></code></pre></td></tr></table></figure>
-
-<p>大多数编译器(gcc, clang等)都支持pragma once,因尽量使用pragma once</p>
+<p>点击运行-&gt;启动调试，或直接按F5，选择编译方式g++，看到输出HelloWorld调试成功</p>
+<p>在第一次调试之后，会在项目文件夹下新建.vscode文件夹，里边保存了项目的配置，可以手动修改，当需要变更工作目录时，可以移动.vscode文件复制环境，非常方便。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于如何用MinGW和Visual Studio Code来编写和调试还有很多内容可以讲，由于笔者学艺不精，目前无法很好的陈述这一内容，等到有所长进后再来完善。</p>
 
                 
               </div>
@@ -297,13 +310,6 @@
               <div class="post-metas my-3">
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/CPP/">#CPP</a>
-      
-    </div>
-  
 </div>
 
 
@@ -312,8 +318,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CPP001:头文件</div>
-      <div>https://whpresent.github.io/2023/01/18/CPP001-头文件/</div>
+      <div>CPP000:环境的安装</div>
+      <div>https://whpresent.github.io/2023/01/19/CPP000-环境的安装/</div>
     </div>
     <div class="license-meta">
       
@@ -325,7 +331,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月18日</div>
+          <div>2023年1月19日</div>
         </div>
       
       
@@ -357,18 +363,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/19/CPP000-%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/" title="CPP000:环境的安装">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CPP000:环境的安装</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/01/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客">
-                        <span class="hidden-mobile">我的第一篇博客</span>
+                      <a href="/2023/01/18/CPP001-%E5%A4%B4%E6%96%87%E4%BB%B6/" title="CPP001:头文件">
+                        <span class="hidden-mobile">CPP001:头文件</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
