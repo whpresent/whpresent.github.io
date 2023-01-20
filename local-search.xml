@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>CPP007:类</title>
+    <link href="/2023/01/20/CPP007-%E7%B1%BB/"/>
+    <url>/2023/01/20/CPP007-%E7%B1%BB/</url>
+    
+    <content type="html"><![CDATA[<h2 id="7-1-类概述"><a href="#7-1-类概述" class="headerlink" title="7.1 类概述"></a>7.1 类概述</h2><p>类是一种用户定义的数据类型，将成员数据和可执行的操作封装在一起。</p><p>基础用法如下</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ClassName</span><br>&#123;<br>    <span class="hljs-comment">//class body</span><br>&#125;;<br></code></pre></td></tr></table></figure><p>类中可以有一些变量作为类的成员</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br>    <span class="hljs-type">int</span> x,y;<span class="hljs-comment">//无法被外部访问，成员默认为私有</span><br>    <span class="hljs-type">int</span> speed;<br>&#125;;<br></code></pre></td></tr></table></figure><p>可以通过访问修饰符来指定类的成员是否可被外部访问，当不添加任何访问修饰符时，默认为私有</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br> <span class="hljs-keyword">public</span>:<br>    <span class="hljs-type">int</span> x,y;<br>    <span class="hljs-type">int</span> speed; <span class="hljs-comment">//公有，可被外部访问</span><br> <span class="hljs-keyword">private</span>:<br>    <span class="hljs-type">char</span>* password; <span class="hljs-comment">//私有，不可被外部访问</span><br>&#125;<br></code></pre></td></tr></table></figure><p>类是一种用户定义的数据类型，用户也可以定义这种数据类型的操作，既方法</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-type">int</span> x,y;<br>    <span class="hljs-type">int</span> speed;<br><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Move</span><span class="hljs-params">(Player&amp; player,<span class="hljs-type">int</span> xa,<span class="hljs-type">int</span> ya)</span></span><br><span class="hljs-function">    </span>&#123;<br>        player.x += speed * xa;<br>        player.y += speed * ya;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CPP006:引用</title>
     <link href="/2023/01/19/CPP006%E5%BC%95%E7%94%A8/"/>
     <url>/2023/01/19/CPP006%E5%BC%95%E7%94%A8/</url>
