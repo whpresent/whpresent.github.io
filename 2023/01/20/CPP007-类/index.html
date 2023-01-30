@@ -24,8 +24,9 @@
 <meta property="og:description" content="7.1 类概述类是一种用户定义的数据类型，将成员数据和可执行的操作封装在一起。 基础用法如下 1234class ClassName&amp;#123;    &#x2F;&#x2F;class body&amp;#125;;  类中可以有一些变量作为类的成员 12345class Player&amp;#123;    int x,y;&#x2F;&#x2F;无法被外部访问，成员默认为私有    int speed;&amp;#125;;  可以通过访问修饰符来指定">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-20T05:48:46.000Z">
-<meta property="article:modified_time" content="2023-01-20T13:27:46.611Z">
+<meta property="article:modified_time" content="2023-01-30T13:17:11.835Z">
 <meta property="article:author" content="Wenhao Present">
+<meta property="article:tag" content="CPP">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -219,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          490 字
+          1.2k 字
         
       </span>
     
@@ -230,7 +231,7 @@
         
         
         
-          5 分钟
+          10 分钟
         
       </span>
     
@@ -281,10 +282,14 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br>    <span class="hljs-type">int</span> x,y;<span class="hljs-comment">//无法被外部访问，成员默认为私有</span><br>    <span class="hljs-type">int</span> speed;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <p>可以通过访问修饰符来指定类的成员是否可被外部访问，当不添加任何访问修饰符时，默认为私有</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br> <span class="hljs-keyword">public</span>:<br>    <span class="hljs-type">int</span> x,y;<br>    <span class="hljs-type">int</span> speed; <span class="hljs-comment">//公有，可被外部访问</span><br> <span class="hljs-keyword">private</span>:<br>    <span class="hljs-type">char</span>* password; <span class="hljs-comment">//私有，不可被外部访问</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br> <span class="hljs-keyword">public</span>:<br>    <span class="hljs-type">int</span> x,y;<br>    <span class="hljs-type">int</span> speed; <span class="hljs-comment">//公有，可被外部访问</span><br> <span class="hljs-keyword">private</span>:<br>    <span class="hljs-type">char</span>* password; <span class="hljs-comment">//私有，不可被外部访问</span><br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <p>类是一种用户定义的数据类型，用户也可以定义这种数据类型的操作，既方法</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-type">int</span> x,y;<br>    <span class="hljs-type">int</span> speed;<br><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Move</span><span class="hljs-params">(Player&amp; player,<span class="hljs-type">int</span> xa,<span class="hljs-type">int</span> ya)</span></span><br><span class="hljs-function">    </span>&#123;<br>        player.x += speed * xa;<br>        player.y += speed * ya;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h2 id="7-2-类中的静态成员"><a href="#7-2-类中的静态成员" class="headerlink" title="7.2 类中的静态成员"></a>7.2 类中的静态成员</h2><p>通过static关键字声明静态成员，静态成员变量对于类的所有实例来说是被共享的，改变静态变量将会反映在所有成员变量上。静态方法也是类似的，静态方法可以直接被类访问，且内部不能有与类实例相关的引用</p>
+<p>静态成员在类的所有对象中是共享的。如果不存在其他的初始化语句，在创建第一个对象时，所有的静态数据都会被初始化为零。我们不能把静态成员的初始化放置在类的定义中，但是可以在类的外部通过使用范围解析运算符 <strong>::</strong> 来重新声明静态变量从而对它进行初始化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Entity</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-type">static</span> <span class="hljs-type">int</span> x;<br>    <span class="hljs-type">static</span> <span class="hljs-type">int</span> y;<br>    <span class="hljs-type">char</span>* name;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Print</span><span class="hljs-params">()</span></span><br><span class="hljs-function">    </span>&#123;<br>        std::cout &lt;&lt; x &lt;&lt; <span class="hljs-string">&quot; , &quot;</span> &lt;&lt; y &lt;&lt; std::endl;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-type">static</span> <span class="hljs-type">void</span> <span class="hljs-title">PrintName</span><span class="hljs-params">()</span></span><br><span class="hljs-function">    </span>&#123;<br>        std::cout &lt;&lt; name &lt;&lt; std::endl;<br>    &#125;<br>&#125;;<br><span class="hljs-type">int</span> Entity::x;<br><span class="hljs-type">int</span> Entity::y; <span class="hljs-comment">//初始化</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    Entity e1;<br>    Entity::x = <span class="hljs-number">3</span>;<br>    Entity::y = <span class="hljs-number">5</span>;<br>    e1.name = <span class="hljs-string">&quot;Mike&quot;</span>;<br>    e1.<span class="hljs-built_in">Print</span>();<br>    <span class="hljs-comment">//Entity::PrintName(); 此语句非法，因静态函数不能使用实例的成员函数(非静态成员)</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -294,6 +299,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/CPP/">#CPP</a>
+      
+    </div>
   
 </div>
 
